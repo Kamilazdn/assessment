@@ -24,10 +24,8 @@ class CompanyApiController extends Controller
                 ? asset('storage/' . $company->logo)
                 : null,
 
-            // ✨ EXTRA ATTRIBUTE REQUIRED BY THE ASSESSMENT
             'employee_count' => $company->employees->count(),
 
-            // Full employee list
             'employees' => $company->employees
         ]);
     }
